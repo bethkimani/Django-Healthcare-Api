@@ -109,7 +109,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'health',
         'USER': 'postgres',
-        'PASSWORD': 'SW2345678',
+        'PASSWORD': 'StrongAdminPassw0r',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -191,7 +191,7 @@ AUTH_USER_MODEL = 'users.CustomUser'
 # CELERY_BROKER_URL = 'amqp://localhost' #using rabbitmq
 # CELERY_RESULT_BACKEND = 'rpc://'
 
-CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
+CELERY_BROKER_URL = os.getenv('sqla+postgresql://postgres:StrongAdminPassw0rd@localhost/health')
 CELERY_RESULT_BACKEND = 'django-db'  # Store results in Django database
 CELERY_TIMEZONE = 'Africa/Nairobi'
 CELERY_ENABLE_UTC = False
